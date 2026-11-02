@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hearthline Building System</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">H</div>
+        <div>
+          <h1>Hearthline</h1>
+          <small>Building dashboard</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-tab="dashboard">Overview</button>
+        <button class="nav-item" data-tab="residents">Residents</button>
+        <button class="nav-item" data-tab="apartments">Apartments</button>
+        <button class="nav-item" data-tab="maintenance">Maintenance</button>
+        <button class="nav-item" data-tab="guests">Guests</button>
+        <button class="nav-item" data-tab="announcements">Announcements</button>
+        <button class="nav-item" data-tab="events">Events</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Building operations</p>
+          <h2 id="pageTitle">Overview</h2>
+        </div>
+        <div class="status-box"><span class="dot"></span>Online • Demo mode</div>
+      </header>
+
+      <section id="dashboard" class="tab-panel active">
+        <div class="stats-grid" id="statsGrid"></div>
+        <div class="panel-grid two-col">
+          <div class="panel">
+            <div class="panel-header"><h3>Recent announcements</h3></div>
+            <div id="announcementList"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><h3>Upcoming events</h3></div>
+            <div id="eventList"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="residents" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Resident directory</h3></div>
+          <table>
+            <thead><tr><th>ID</th><th>Name</th><th>Apartment</th><th>Email</th><th>Status</th></tr></thead>
+            <tbody id="residentsTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="apartments" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Apartment conditions</h3></div>
+          <table>
+            <thead><tr><th>Unit</th><th>Resident</th><th>Shower</th><th>AC</th><th>Heating</th><th>Appliances</th></tr></thead>
+            <tbody id="apartmentTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="maintenance" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Maintenance queue</h3></div>
+          <table>
+            <thead><tr><th>ID</th><th>Apartment</th><th>Issue</th><th>Category</th><th>Priority</th><th>Status</th></tr></thead>
+            <tbody id="maintenanceTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="guests" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Guest passes</h3></div>
+          <table>
+            <thead><tr><th>Guest</th><th>Host</th><th>Apartment</th><th>Arrival</th><th>Status</th></tr></thead>
+            <tbody id="guestTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="announcements" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Published announcements</h3></div>
+          <div id="announcementDetail"></div>
+        </div>
+      </section>
+
+      <section id="events" class="tab-panel">
+        <div class="panel">
+          <div class="panel-header"><h3>Building events</h3></div>
+          <div id="eventDetail"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
